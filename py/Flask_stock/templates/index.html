@@ -1,0 +1,16 @@
+<html>
+
+<body>
+    <h1>NEPSE: Stock Trend Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="stock_name">Select Stock:</label>
+        <select name="stock_name" id="stock_name">
+            {% for stock in stocks %}
+            <option value="{{ stock }}">{{ stock }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+
+</html>
